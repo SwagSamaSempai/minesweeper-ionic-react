@@ -1,0 +1,62 @@
+$color-background: #6b988e;
+$color-button-highlight: #77968e;
+$color-cell-revealed: #cccccc;
+$color-cell-hidden: #333333;
+$color-info: #cccccc;
+$color-info-border: #333333;
+$color-mine: #fc543c;
+
+
+.cell {
+  background: $color-cell-revealed;
+  border: 1px solid $color-background;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 600;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  width: 45px;
+
+  &.flag, &.mine {
+    background: $color-mine;
+  }
+
+  &:not(.revealed) {
+    background: $color-cell-hidden;
+  }
+}
+
+.game {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: fit-content;
+}
+
+.grid {
+  td {
+    padding: 0;
+  }
+}
+
+.game-info {
+  border: 5px double $color-info-border;
+  box-sizing: border-box;
+  color: $color-info;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  min-width: 572px;
+  padding: 7px;
+  text-align: center;
+  width: 100%;
+
+  .status {
+    font-size: xx-large;
+  }
+}
